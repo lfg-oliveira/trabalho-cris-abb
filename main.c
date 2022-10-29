@@ -15,7 +15,9 @@ int main(int argc, char *argv[]) {
 	raiz->esq = (struct No*)malloc(sizeof(struct No));
 	raiz->dir = (struct No*)malloc(sizeof(struct No));
 	raiz->esq->valor=2;
-	raiz->dir->valor= 7;
+	raiz->dir->valor= 6;
+	raiz->dir->dir = calloc(1, sizeof(struct No));
+	raiz->dir->dir->valor = 7;
 	raiz->esq->esq = (struct No*)malloc(sizeof(struct No));
 	raiz->esq->dir = (struct No*)malloc(sizeof(struct No));
 	raiz->esq->esq->valor = 1;
@@ -25,7 +27,6 @@ int main(int argc, char *argv[]) {
 	raiz->esq->dir->esq = NULL;
 	raiz->esq->dir->dir = NULL;
 	raiz->dir->esq = NULL;
-	raiz->dir->dir = NULL;
 	/* insereArvoreDeBusca(5,&raiz);
 	 printf("\n%d teste\n", raiz->valor);
 	 insereArvoreDeBusca(7,&raiz);
@@ -137,7 +138,7 @@ int main(int argc, char *argv[]) {
 					printf("Valor nao esta na arvore!");
 					break;
 				}
-2				printf("Valor removido!");
+				printf("Valor removido!");
 				break;
 			default :
 				printf("\nEscolha inv�lida");
