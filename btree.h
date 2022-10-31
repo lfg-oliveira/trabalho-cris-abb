@@ -147,6 +147,3 @@ int BSearch(BNo *root, int key) {
     return m;
 }
 
-BNo *left(BNo *root, int key){
-
-}
