@@ -1,16 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "arvore.h"
+// #include "arvore.h"
+#include "btree.h"
 #include <locale.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	setlocale(LC_ALL,"portuguese");
-	int op,novo,resul=0, valor = 0;
-	struct No *antecede = NULL;
-	struct No *sucede = NULL;
-	struct No *aux = NULL;
-	raiz = (struct No*)malloc(sizeof(struct No));
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "portuguese");
+	int op, novo, resul = 0, valor = 0;
+	// struct No *antecede = NULL;
+	// struct No *sucede = NULL;
+	// struct No *aux = NULL;
+	// raiz = (struct No*)malloc(sizeof(struct No));
+	/*
 	raiz->valor = 5;
 	raiz->esq = (struct No*)malloc(sizeof(struct No));
 	raiz->dir = (struct No*)malloc(sizeof(struct No));
@@ -26,7 +27,7 @@ int main(int argc, char *argv[]) {
 	raiz->esq->esq->dir = NULL;
 	raiz->esq->dir->esq = NULL;
 	raiz->esq->dir->dir = NULL;
-	raiz->dir->esq = NULL;
+	raiz->dir->esq = NULL; */
 	/* insereArvoreDeBusca(5,&raiz);
 	 printf("\n%d teste\n", raiz->valor);
 	 insereArvoreDeBusca(7,&raiz);
@@ -43,7 +44,7 @@ int main(int argc, char *argv[]) {
 	  printf("\nPercurso p�s:\n");
 	  posOrdem(raiz);*/
 
-	do{
+	/* do{
 		printf("\n1 - Inserir Elemento");
 		printf("\n2 - Imprimir em Ordem Crescente");
 		printf("\n3 - Imprimir em Ordem Decrescente");
@@ -143,6 +144,10 @@ int main(int argc, char *argv[]) {
 			default :
 				printf("\nEscolha inv�lida");
 		}
-	}while(op!= 0);
+	}while(op!= 0); */
+	int arr[] = {10,20,30,40};
+	createNodeWithArray(&raiz, arr, 4, 5);
 
+	int f = BSearch(raiz, 20);
+	printNode(raiz);
 }
